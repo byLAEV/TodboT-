@@ -125,4 +125,8 @@ Creador de TodboT | Costa Rica – El Salvador – Internacional
 Especialista en Bitcoin, diseño de arquitectura legal-tecnológica y gobernanza en entornos digitales
 GitHub | laev.lab@proton.me | +506 7114 8872
 
+## Demo en video
+
+[TodboT - Ver en Canva](https://www.canva.com/design/DAGnZ9u-N0A/zhH1z4j2tLSrVi5jxKqYrQ/watch)
+
 
