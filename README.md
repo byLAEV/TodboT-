@@ -127,6 +127,6 @@ GitHub | laev.lab@proton.me | +506 7114 8872
 
 ## TodboT en video
 
-[TodboT - Ver en Canva](https://www.canva.com/design/DAGnZ9u-N0A/zhH1z4j2tLSrVi5jxKqYrQ/watch)
-
+- [TodboT - Ver en Canva](https://www.canva.com/design/DAGnZ9u-N0A/zhH1z4j2tLSrVi5jxKqYrQ/watch)
+- [Nuevo video - Ver en Canva](https://www.canva.com/design/DAGnoL6W6g8/0wrHJ_XYmL08ukI_bQMeew/watch)
 
