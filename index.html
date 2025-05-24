@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Firmar el Whitepaper TOdbOT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body style="font-family: Arial; padding: 20px; background-color: #f4f4f4;">
+  <h2>Whitepaper Oficial - TOdbOT</h2>
+  <p>Leé el documento completo aquí:</p>
+  <a href="https://github.com/byLAEV/TodboT-/blob/main/TOdbOT%20Whitepaper.pdf" target="_blank" style="color:blue;">
+    Ver Whitepaper en GitHub
+  </a>
+
+  <hr>
+
+  <h3>Firmar el Whitepaper</h3>
+  <p>Con tu firma digital confirmás que leíste y respaldás la propuesta de TOdbOT del Cartel de Bitcoiners.</p>
+  <button onclick="firmar()" style="padding: 12px 20px; background-color: black; color: white; border: none; border-radius: 5px;">
+    Firmar con MetaMask
+  </button>
+
+  <p id="resultado" style="margin-top: 20px;"></p>
+
+  <script>
+    async function firmar() {
+      try {
+        if (!window.ethereum) {
+          alert("MetaMask no está disponible. Usá el navegador de MetaMask.");
+          return;
+        }
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        const address = await signer.getAddress();
+
+        const mensaje = `Yo ${address} declaro que he leído y respaldo el whitepaper TOdbOT del Cartel de Bitcoiners.`;
+        const firma = await signer.signMessage(mensaje);
+
+        document.getElementById("resultado").innerHTML = `
+          <strong>Firma realizada con éxito:</strong><br>
+          Dirección: ${address}<br>
+          Firma:<br>
+          <textarea rows="5" cols="60" readonly>${firma}</textarea>
+        `;
+      } catch (error) {
+        console.error(error);
+        alert("Error al firmar. Intentá de nuevo.");
+      }
+    }
+  </script>
+</body>
+</html>
